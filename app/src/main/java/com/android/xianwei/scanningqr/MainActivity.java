@@ -4,12 +4,14 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 
 import com.android.xianwei.scanningqr.scanningQR.CaptureActivity;
+import com.yanzhenjie.permission.Action;
 import com.yanzhenjie.permission.AndPermission;
 import com.yanzhenjie.permission.Permission;
 import com.yanzhenjie.permission.Rationale;
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 		tv.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				/*AndPermission.with(MainActivity.this)
+				AndPermission.with(MainActivity.this)
 						.permission(Permission.Group.CAMERA)
 						.rationale(mRationale)
 						.onGranted(new Action() {
@@ -58,8 +60,7 @@ public class MainActivity extends AppCompatActivity {
 								}
 							}
 						})
-						.start();*/
-				startActivityForResult(new Intent(MainActivity.this, CaptureActivity.class).putExtra("from", "MainActivity"), SCANNING_QR);
+						.start();
 			}
 		});
 

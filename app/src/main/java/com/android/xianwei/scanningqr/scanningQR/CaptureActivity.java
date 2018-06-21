@@ -26,6 +26,7 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.widget.Toast;
 
 import com.android.xianwei.scanningqr.R;
 import com.android.xianwei.scanningqr.scanningQR.camera.CameraManager;
@@ -191,6 +192,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
 
 	private void handlerString(String resultStr) {
 		System.out.println(resultStr);
+		Toast.makeText(this,resultStr,Toast.LENGTH_LONG).show();
 	}
 
 

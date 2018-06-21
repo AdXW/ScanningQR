@@ -24,4 +24,5 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     implementation 'com.yanzhenjie:permission:2.0.0-rc4'
     compile 'com.google.zxing:core:3.3.0'
+    //implementation 'com.github.open-android:Zxing:v1.0.3'
 }
